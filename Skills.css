@@ -1,0 +1,109 @@
+.skills-section {
+    background-color: var(--bg-primary);
+    padding: 6rem 0;
+  }
+  
+  .skills-content {
+    display: flex;
+    gap: 3rem;
+    margin-top: 2rem;
+  }
+  
+  .skills-categories {
+    flex: 3;
+  }
+  
+  .skill-category {
+    margin-bottom: 3rem;
+  }
+  
+  .category-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .category-icon {
+    font-size: 2rem;
+    margin-right: 1rem;
+    color: var(--accent-color);
+  }
+  
+  .skill-category h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .skillbars {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .tools-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  
+  .tool-item {
+    background-color: var(--bg-tertiary);
+    padding: 1rem;
+    border-radius: 6px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .skills-summary {
+    flex: 2;
+    background-color: var(--bg-tertiary);
+    border-radius: 8px;
+    padding: 2rem;
+  }
+  
+  .skills-summary h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+  }
+  
+  .skills-summary h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--accent-color);
+  }
+  
+  .skills-summary p {
+    margin-bottom: 1.5rem;
+    color: var(--text-secondary);
+  }
+  
+  .skills-summary ul {
+    margin-left: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-secondary);
+  }
+  
+  .skills-summary li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .learning-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .learning-badge {
+    background-color: var(--accent-color);
+    color: var(--bg-primary);
+    padding: 0.4rem 0.8rem;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }

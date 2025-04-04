@@ -1,0 +1,259 @@
+:root {
+  --primary-color: #4f46e5;
+  --text-primary: #1f2937;
+  --text-secondary: #4b5563;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --border-radius: 12px;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-xxl: 3rem;
+}
+
+/* Reset and global styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+/* About page container */
+.about-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: var(--spacing-xxl) var(--spacing-md) calc(var(--spacing-xxl) + 3rem) var(--spacing-md);
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Main container */
+.about-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.about-content {
+  width: 100%;
+}
+
+.main-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+/* Section styling */
+.section {
+  width: 100%;
+  margin-bottom: var(--spacing-lg);
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.section-text {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+}
+
+/* Scroll indicator - Fixed positioning */
+
+
+.arrow {
+  font-size: 1.25rem;
+  margin-top: var(--spacing-sm);
+}
+
+/* Animation keyframes */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+/* Truly responsive styles */
+/* Large screens (default) */
+@media screen and (min-width: 1200px) {
+  .about-container {
+    padding: var(--spacing-xxl);
+  }
+  
+  .section-title {
+    font-size: 1.75rem;
+  }
+  
+  .section-text {
+    font-size: 1.25rem;
+  }
+}
+
+/* Desktop */
+@media screen and (max-width: 1199px) {
+  .about-container {
+    max-width: 90%;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .section-text {
+    font-size: 1.1rem;
+  }
+}
+
+/* Tablets */
+@media screen and (max-width: 992px) {
+  .about-page {
+    padding: var(--spacing-xl) var(--spacing-md) calc(var(--spacing-xl) + 3rem) var(--spacing-md);
+  }
+  
+  .about-container {
+    padding: var(--spacing-lg);
+  }
+  
+  .section-title {
+    font-size: 1.3rem;
+  }
+  
+  .section-text {
+    font-size: 1rem;
+  }
+}
+
+/* Small tablets */
+@media screen and (max-width: 768px) {
+  .about-page {
+    padding: var(--spacing-lg) var(--spacing-md) calc(var(--spacing-lg) + 3rem) var(--spacing-md);
+  }
+  
+  .about-container {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+  
+  .section-title {
+    font-size: 1.2rem;
+  }
+  
+  .section-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  
+  .scroll-down {
+    font-size: 0.8rem;
+  }
+}
+
+/* Mobile phones */
+@media screen and (max-width: 576px) {
+  .about-page {
+    padding: var(--spacing-md) var(--spacing-md) calc(var(--spacing-md) + 3rem) var(--spacing-md);
+  }
+  
+  .about-container {
+    padding: var(--spacing-md);
+    border-radius: 8px;
+  }
+  
+  .section-title {
+    font-size: 1.1rem;
+  }
+  
+  .section-text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  .scroll-down {
+    font-size: 0.75rem;
+    bottom: 1rem;
+  }
+}
+
+/* Small mobile phones */
+@media screen and (max-width: 375px) {
+  .about-container {
+    padding: var(--spacing-sm);
+  }
+  
+  .section {
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .section-title {
+    font-size: 1rem;
+  }
+  
+  .section-text {
+    font-size: 0.85rem;
+  }
+  
+  .scroll-down {
+    font-size: 0.7rem;
+  }
+}
+
+/* Accessibility & Print Support */
+@media print {
+  .about-page {
+    padding: 0;
+    background: none;
+  }
+  
+  .about-container {
+    box-shadow: none;
+    padding: 0;
+    max-width: 100%;
+  }
+  
+  .scroll-down {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .arrow {
+    animation: none !important;
+  }
+}
+
+/* Animation classes that will be controlled by React & Framer Motion */
+.animate-arrow {
+  animation: bounce 1.5s infinite ease-in-out;
+}
+
+/* Hover effects */
+.section-text:hover {
+  color: var(--text-primary);
+}
